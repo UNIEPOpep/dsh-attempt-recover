@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使用问题 / 排错
+    url: https://github.com/UNIEPOpep/dsh-attempt-recover/blob/main/docs/troubleshooting.md
+    about: 装了没反应、按钮报错、块不显示 —— 先看这里，大部分情况已有答案。

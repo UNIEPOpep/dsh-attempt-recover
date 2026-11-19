@@ -1,0 +1,86 @@
+name: Bug report
+description: 插件有bug
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        先看 [docs/troubleshooting.md](../../docs/troubleshooting.md)，很多情况那里已经写了答案。
+        还请**不要**贴完整会话日志 —— 里面有你的对话内容。
+
+  - type: input
+    id: dsh-version
+    attributes:
+      label: DSH 版本
+      placeholder: "例如 0.2.2-rc.2"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: "例如 Windows 11 26200 / macOS 15.2 / Ubuntu 24.04"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 使用形态
+      options:
+        - 桌面端
+        - 浏览器打开的 Web 版
+        - 其他（请在下文说明）
+    validations:
+      required: true
+
+  - type: textarea
+    id: route
+    attributes:
+      label: 路由检查结果
+      description: 将YOUR_DSH_PORT替换为你的DSH端口（不会就发给你的Agent帮你做），运行这条命令，粘贴返回的内容
+      placeholder: "curl -i -X POST http://127.0.0.1:YOUR_DSH_PORT/api/attempt-recover"
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 期望看到什么，实际看到什么。界面上的错误文案请原样贴出。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 一次请求失败（请贴出请求失败的报错）
+        2. 展开该轮末尾的折叠块
+        3. 点「加回正文」
+        4. 看到「加回失败：...」
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志（可选）
+      description: 只要带 attempt-recover 字样的行即可
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我读过 docs/troubleshooting.md，没有找到对应条目
+          required: true
+        - label: 我确认粘贴的内容里不包含敏感对话数据
+          required: true

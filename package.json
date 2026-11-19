@@ -1,0 +1,76 @@
+{
+  "name": "@uniepopep/dsh-attempt-recover",
+  "version": "1.0.0",
+  "description": "Show the model output that DeepSeek Harness generated but discarded when a request failed, and let you put it back into the conversation context.",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "deepseek",
+    "llm",
+    "assistant-attempt",
+    "recover",
+    "plugin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UNIEPOpep/dsh-attempt-recover.git"
+  },
+  "homepage": "https://github.com/UNIEPOpep/dsh-attempt-recover#readme",
+  "bugs": {
+    "url": "https://github.com/UNIEPOpep/dsh-attempt-recover/issues"
+  },
+  "icon": "./docs/assets/icon.png",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "LICENSE",
+    "assets/",
+    "docs/architecture.md",
+    "docs/troubleshooting.md",
+    "docs/releasing.md",
+    "docs/assets/icon.png"
+  ],
+  "scripts": {
+    "test": "node selfcheck.mjs && node e2e.mjs",
+    "check": "node selfcheck.mjs",
+    "e2e": "node e2e.mjs",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "author": {
+    "name": "UNIEPOpep",
+    "url": "https://github.com/UNIEPOpep"
+  }
+}
