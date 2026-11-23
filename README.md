@@ -1,8 +1,15 @@
-<h1 align="center">dsh-attempt-recover</h1>
+<p align="center">
+  <img src="docs/assets/icon.png" alt="dsh-attempt-recover" width="104" height="104">
+</p>
 
-<p align="center">把「已经写出来、却被丢掉」的模型输出，重新还给对话</p>
+<h1 align="center">DSH Attempt Recover</h1>
 
 <p align="center">
+  <strong>把「已经写出来、却被丢掉」的模型输出，重新还给对话</strong><br></p>
+
+<p align="center">
+  <a href="https://github.com/UNIEPOpep/dsh-attempt-recover/tags"><img src="https://img.shields.io/npm/v/@uniepopep/dsh-attempt-recover?style=flat&label=Latest%20Release&color=4D6BFE" alt="Latest Release"></a>
+  <img src="https://img.shields.io/npm/dt/@uniepopep/dsh-attempt-recover?style=flat&label=Total%20Downloads&color=4D6BFE" alt="Total downloads">
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-blue" alt="License"></a>
   <a href="https://github.com/UNIEPOpep/dsh-attempt-recover/actions/workflows/ci.yml"><img src="https://github.com/UNIEPOpep/dsh-attempt-recover/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://github.com/UNIEPOpep/dsh-attempt-recover"><img src="https://img.shields.io/github/stars/UNIEPOpep/dsh-attempt-recover?style=social" alt="Stars"></a>
